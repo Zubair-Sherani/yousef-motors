@@ -262,6 +262,28 @@ Thank you! Your inquiry has been sent. We'll get back to you soon.
 
 ## Deploy to Cloudflare Pages
 
+This site is a **static HTML export**. Do not use the regular Next.js or OpenNext Worker preset. That path runs `npx opennextjs-cloudflare build` and fails looking for `.next/standalone/.next/server/pages-manifest.json`.
+
+Use these exact build settings:
+
+| Setting | Value |
+| --- | --- |
+| Framework preset | **Next.js (Static HTML Export)** |
+| Production branch | `main` |
+| Build command | `npx next build` |
+| Build directory | `out` |
+| Node version | `20` or later |
+
+If an existing Cloudflare project is already using OpenNext:
+
+1. Open the project → **Settings** → **Build configuration**.
+2. Change the framework preset to **Next.js (Static HTML Export)**.
+3. Set the build command to `npx next build`.
+4. Set the build output directory to `out`.
+5. Save and **Retry deployment**.
+
+If the project was created as a Worker instead of Pages, create a new **Pages** project, import `yousef-motors`, and use the static export settings above.
+
 1. Create a GitHub repository.
 2. Push this project to the production branch, usually `main`.
 
