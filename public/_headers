@@ -1,0 +1,17 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/cars/*
+  Cache-Control: public, max-age=604800
+
+/hero.webp
+  Cache-Control: public, max-age=604800
+
+/og.webp
+  Cache-Control: public, max-age=604800

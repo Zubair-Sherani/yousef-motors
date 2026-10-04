@@ -1,0 +1,38 @@
+{
+  "name": "nevada-prime-capital",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "add-car": "tsx scripts/add-car.ts",
+    "remove-car": "tsx scripts/remove-car.ts",
+    "mark-sold": "tsx scripts/mark-sold.ts",
+    "edit-car": "tsx scripts/edit-car.ts",
+    "list-cars": "tsx scripts/list-cars.ts",
+    "generate-sample-images": "tsx scripts/generate-sample-images.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "next": "16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.8",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}
